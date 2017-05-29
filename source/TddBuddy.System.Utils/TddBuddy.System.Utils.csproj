@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <PackageId>TddBuddy.System.Utils.DotNetCore</PackageId>
+    <Authors>TddBuddy</Authors>
+    <Company>StoneAge Technologies</Company>
+    <Product>TddBuddy.System.Utils.DotNetCore</Product>
+    <Description>Some useful utilities for JSON parsing.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+  </ItemGroup>
+
+</Project>
