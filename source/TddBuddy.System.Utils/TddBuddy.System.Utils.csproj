@@ -7,6 +7,7 @@
     <Company>StoneAge Technologies</Company>
     <Product>TddBuddy.System.Utils.DotNetCore</Product>
     <Description>Some useful utilities for JSON parsing.</Description>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
