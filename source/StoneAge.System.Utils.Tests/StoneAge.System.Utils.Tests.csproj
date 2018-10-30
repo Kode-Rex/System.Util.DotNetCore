@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TddBuddy.System.Utils\StoneAge.System.Utils.csproj" />
+    <ProjectReference Include="..\StoneAge.System.Utils\StoneAge.System.Utils.csproj" />
   </ItemGroup>
 
 </Project>
