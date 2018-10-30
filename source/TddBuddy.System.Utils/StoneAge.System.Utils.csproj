@@ -1,17 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
-    <PackageId>TddBuddy.System.Utils.DotNetCore</PackageId>
-    <Authors>TddBuddy</Authors>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <PackageId>StoneAge.System.Utils.DotNetCore</PackageId>
+    <Authors>Travis Frisinger</Authors>
     <Company>StoneAge Technologies</Company>
-    <Product>TddBuddy.System.Utils.DotNetCore</Product>
+    <Product>StoneAge.System.Utils.DotNetCore</Product>
     <Description>Some useful utilities for JSON parsing.</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
 
 </Project>

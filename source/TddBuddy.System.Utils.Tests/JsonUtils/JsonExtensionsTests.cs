@@ -7,36 +7,36 @@ namespace TddBuddy.System.Utils.Tests.JsonUtils
     public class JsonExtensionsTests
     {
         [Test]
-        public void TryParseModel_WhenPopulatedParsableModel_ShouldReturnTrue()
+        public void TryDeserialize_WhenPopulatedParsableModel_ShouldReturnTrue()
         {
             //---------------Set up test pack-------------------
-            var model = new TestParsingObject {Foo = 1, MagicProperty = "Walking on water, cuz I trained some turtles" }.Serialize();
+            var model = new TestObject {Foo = 1, MagicProperty = "Walking on water, cuz I trained some turtles" }.Serialize();
             //---------------Execute Test ----------------------
-            var result = model.TryParseModel<TestParsingObject>();
+            var result = model.TryDeserialize<TestObject>();
             //---------------Test Result -----------------------
             Assert.IsTrue(result.IsValid);
             Assert.IsNotNull(result.ParsedModel);
         }
 
         [Test]
-        public void TryParseModel_WhenEmptyParsableModel_ShouldReturnTrue()
+        public void TryDeserialize_WhenEmptyParsableModel_ShouldReturnTrue()
         {
             //---------------Set up test pack-------------------
-            var model = new TestParsingObject().Serialize();
+            var model = new TestObject().Serialize();
             //---------------Execute Test ----------------------
-            var result = model.TryParseModel<TestParsingObject>();
+            var result = model.TryDeserialize<TestObject>();
             //---------------Test Result -----------------------
             Assert.IsTrue(result.IsValid);
             Assert.IsNotNull(result.ParsedModel);
         }
 
         [Test]
-        public void TryParseModel_WhenNotParsableModel_ShouldReturnFalse()
+        public void TryDeserialize_WhenNotParsableModel_ShouldReturnFalse()
         {
             //---------------Set up test pack-------------------
             var model = "{ \"name\" : Bob \"age\": 36}";
             //---------------Execute Test ----------------------
-            var result = model.TryParseModel<TestParsingObject>();
+            var result = model.TryDeserialize<TestObject>();
             //---------------Test Result -----------------------
             Assert.IsFalse(result.IsValid);
             Assert.IsNull(result.ParsedModel);
@@ -59,12 +59,12 @@ namespace TddBuddy.System.Utils.Tests.JsonUtils
         }
 
         [Test]
-        public void ParseModel_WhenObjectContainTitleCaseProperties_ShouldReturCamelcaseProperites()
+        public void Deserialize_WhenObjectContainTitleCaseProperties_ShouldReturCamelcaseProperites()
         {
             //---------------Set up test pack-------------------
             var input = @"{""foo"" : 1, ""magicProperty"": ""bar""}";
             //---------------Execute Test ----------------------
-            var result = input.ParseModel<TestParsingObject>();
+            var result = input.Deserialize<TestObject>();
             //---------------Test Result -----------------------
             Assert.AreEqual(1, result.Foo);
             Assert.AreEqual("bar", result.MagicProperty);

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TddBuddy.System.Utils", "TddBuddy.System.Utils\TddBuddy.System.Utils.csproj", "{E53F103E-0842-4E17-884C-F92ED1657B33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoneAge.System.Utils", "TddBuddy.System.Utils\StoneAge.System.Utils.csproj", "{E53F103E-0842-4E17-884C-F92ED1657B33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TddBuddy.System.Utils.Tests", "TddBuddy.System.Utils.Tests\TddBuddy.System.Utils.Tests.csproj", "{56F3B9A6-1098-44DD-8FF1-ACFD89FB854B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoneAge.System.Utils.Tests", "TddBuddy.System.Utils.Tests\StoneAge.System.Utils.Tests.csproj", "{56F3B9A6-1098-44DD-8FF1-ACFD89FB854B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6DACE500-0AEB-4100-A2CA-BFBC675B84FE}
 	EndGlobalSection
 EndGlobal

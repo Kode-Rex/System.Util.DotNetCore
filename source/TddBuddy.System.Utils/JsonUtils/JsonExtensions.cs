@@ -20,17 +20,17 @@ namespace TddBuddy.System.Utils.JsonUtils
             return JsonConvert.SerializeObject(input, CamelcaseJsonSerializerSettings);
         }
 
-        public static T ParseModel<T>(this string model)
+        public static T Deserialize<T>(this string model)
         {
             return JsonConvert.DeserializeObject<T>(model, CamelcaseJsonSerializerSettings);
         }
 
-        public static ModelParseResult<T> TryParseModel<T>(this string model)
+        public static DeserializationResult<T> TryDeserialize<T>(this string model)
         {
             try
             {
                 var parsedModel = ParseModelExact<T>(model);
-                return new ModelParseResult<T>
+                return new DeserializationResult<T>
                 {
                     IsValid = true,
                     ParsedModel = parsedModel
@@ -38,7 +38,7 @@ namespace TddBuddy.System.Utils.JsonUtils
             }
             catch (JsonException e)
             {
-                var result = new ModelParseResult<T> { IsValid = false };
+                var result = new DeserializationResult<T> { IsValid = false };
                 result.Errors.Add(e.Message);
                 return result;
             }
