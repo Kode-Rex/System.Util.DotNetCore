@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
-using TddBuddy.System.Utils.JsonUtils;
+using StoneAge.System.Utils.JsonUtils;
 
-namespace TddBuddy.System.Utils.Tests.JsonUtils
+namespace StoneAge.System.Utils.Tests.JsonUtils
 {
     [TestFixture]
     public class JsonExtensionsTests
@@ -15,7 +15,7 @@ namespace TddBuddy.System.Utils.Tests.JsonUtils
             var result = model.TryDeserialize<TestObject>();
             //---------------Test Result -----------------------
             Assert.IsTrue(result.IsValid);
-            Assert.IsNotNull(result.ParsedModel);
+            Assert.IsNotNull(result.Model);
         }
 
         [Test]
@@ -27,7 +27,7 @@ namespace TddBuddy.System.Utils.Tests.JsonUtils
             var result = model.TryDeserialize<TestObject>();
             //---------------Test Result -----------------------
             Assert.IsTrue(result.IsValid);
-            Assert.IsNotNull(result.ParsedModel);
+            Assert.IsNotNull(result.Model);
         }
 
         [Test]
@@ -39,7 +39,7 @@ namespace TddBuddy.System.Utils.Tests.JsonUtils
             var result = model.TryDeserialize<TestObject>();
             //---------------Test Result -----------------------
             Assert.IsFalse(result.IsValid);
-            Assert.IsNull(result.ParsedModel);
+            Assert.IsNull(result.Model);
         }
 
         [Test]

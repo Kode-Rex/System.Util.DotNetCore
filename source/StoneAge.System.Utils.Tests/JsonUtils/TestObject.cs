@@ -1,4 +1,4 @@
-﻿namespace TddBuddy.System.Utils.Tests.JsonUtils
+﻿namespace StoneAge.System.Utils.Tests.JsonUtils
 {
     public class TestObject
     {

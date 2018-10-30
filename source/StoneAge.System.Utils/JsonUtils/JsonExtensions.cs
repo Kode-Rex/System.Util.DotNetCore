@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace TddBuddy.System.Utils.JsonUtils
+namespace StoneAge.System.Utils.JsonUtils
 {
     public static class JsonExtensions
     {
@@ -33,7 +33,7 @@ namespace TddBuddy.System.Utils.JsonUtils
                 return new DeserializationResult<T>
                 {
                     IsValid = true,
-                    ParsedModel = parsedModel
+                    Model = parsedModel
                 };
             }
             catch (JsonException e)

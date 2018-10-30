@@ -9,10 +9,10 @@
     <Description>Some useful utilities for JSON parsing.</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/System.Util.DotNetCore</PackageProjectUrl>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
-    <Version>1.0.1</Version>
-    <PackageReleaseNotes>Ported from TddBuddy package. This is now the new source</PackageReleaseNotes>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
+    <Version>1.0.2</Version>
+    <PackageReleaseNotes>Swapped namespaces after port</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
