@@ -6,13 +6,13 @@
     <Authors>Travis Frisinger</Authors>
     <Company>StoneAge Technologies</Company>
     <Product>StoneAge.System.Utils.DotNetCore</Product>
-    <Description>Some useful utilities for JSON parsing, email validation, time and object property hashing.</Description>
+    <Description>Some useful utilities for JSON parsing, email validation, time and object property hashing, and object property copying</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/System.Util.DotNetCore</PackageProjectUrl>
-    <AssemblyVersion>1.2.1.0</AssemblyVersion>
-    <FileVersion>1.2.1.0</FileVersion>
-    <Version>1.2.1</Version>
-    <PackageReleaseNotes>Added email validation and object property hashing</PackageReleaseNotes>
+    <AssemblyVersion>1.2.2.0</AssemblyVersion>
+    <FileVersion>1.2.2.0</FileVersion>
+    <Version>1.2.2</Version>
+    <PackageReleaseNotes>Added object property copier</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
