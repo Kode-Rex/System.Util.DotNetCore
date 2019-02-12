@@ -1,7 +1,8 @@
 ﻿using NUnit.Framework;
+using StoneAge.System.Utils.Json;
 using StoneAge.System.Utils.JsonUtils;
 
-namespace StoneAge.System.Utils.Tests.JsonUtils
+namespace StoneAge.System.Utils.Tests.Json
 {
     [TestFixture]
     public class JsonExtensionsTests
@@ -59,7 +60,23 @@ namespace StoneAge.System.Utils.Tests.JsonUtils
         }
 
         [Test]
-        public void Deserialize_WhenObjectContainTitleCaseProperties_ShouldReturCamelcaseProperites()
+        public void Serialize_WhenObjectContainTitleCaseProperties_ShouldReturnLowerCaseProperties()
+        {
+            //---------------Set up test pack-------------------
+            var expected = "{\"foo\":\"bar\",\"magicproperty\":\"foobar\"}";
+            var input = new
+            {
+                Foo = "bar",
+                MagicProperty = "foobar"
+            };
+            //---------------Execute Test ----------------------
+            var result = input.Serialize_With_LowerCase_Settings();
+            //---------------Test Result -----------------------
+            Assert.AreEqual(expected, result);
+        }
+
+        [Test]
+        public void Deserialize_WhenObjectContainTitleCaseProperties_ShouldReturnCamelcaseProperties()
         {
             //---------------Set up test pack-------------------
             var input = @"{""foo"" : 1, ""magicProperty"": ""bar""}";

@@ -6,7 +6,7 @@ using StoneAge.System.Utils.Time;
 namespace StoneAge.System.Utils.Tests.Time
 {
     [TestFixture]
-    public class UtcParserTests
+    public class UtcUtilsTests
     {
         [Test]
         public void Parse_As_Utc_Then_Add_Current_Timezone_Offset_ShouldReturnUtcTimeWithTimeZoneOffsetAdded()

@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using StoneAge.System.Utils.EmailUtils;
 
-namespace StoneAge.System.Utils.Tests.EmailUtils
+namespace StoneAge.System.Utils.Tests.Email
 {
     [TestFixture]
     public class EmailValidationExtensionTests

@@ -2,8 +2,6 @@
 using NUnit.Framework;
 using StoneAge.System.Utils.Copy;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace StoneAge.System.Utils.Tests.Copy
 {

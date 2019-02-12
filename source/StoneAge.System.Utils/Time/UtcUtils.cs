@@ -2,7 +2,7 @@
 
 namespace StoneAge.System.Utils.Time
 {
-    public static class UtcParser
+    public static class UtcUtils
     {
         public static DateTime Parse_As_Utc_Then_Add_Current_Timezone_Offset(this string dateTimeString)
         {

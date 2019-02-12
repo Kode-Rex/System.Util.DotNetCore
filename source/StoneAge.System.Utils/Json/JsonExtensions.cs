@@ -1,13 +1,19 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using StoneAge.System.Utils.JsonUtils;
 
-namespace StoneAge.System.Utils.JsonUtils
+namespace StoneAge.System.Utils.Json
 {
     public static class JsonExtensions
     {
         private static readonly JsonSerializerSettings CamelcaseJsonSerializerSettings = new JsonSerializerSettings
         {
             ContractResolver = new CamelCasePropertyNamesContractResolver()
+        };
+
+        private static readonly JsonSerializerSettings LowercaseJsonSerializerSettings = new JsonSerializerSettings
+        {
+            ContractResolver = new LowercaseContractResolver()
         };
 
         public static object FormatStringForJson(this string input)
@@ -18,6 +24,11 @@ namespace StoneAge.System.Utils.JsonUtils
         public static string Serialize(this object input)
         {
             return JsonConvert.SerializeObject(input, CamelcaseJsonSerializerSettings);
+        }
+
+        public static string Serialize_With_LowerCase_Settings(this object input)
+        {
+            return JsonConvert.SerializeObject(input, LowercaseJsonSerializerSettings);
         }
 
         public static T Deserialize<T>(this string model)
@@ -53,6 +64,14 @@ namespace StoneAge.System.Utils.JsonUtils
             };
 
             return JsonConvert.DeserializeObject<T>(model, jsonSerializerSettings);
+        }
+
+        private class LowercaseContractResolver : DefaultContractResolver
+        {
+            protected override string ResolvePropertyName(string propertyName)
+            {
+                return propertyName.ToLower();
+            }
         }
     }
 }

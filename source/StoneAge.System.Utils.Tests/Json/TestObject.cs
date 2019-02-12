@@ -1,4 +1,4 @@
-﻿namespace StoneAge.System.Utils.Tests.JsonUtils
+﻿namespace StoneAge.System.Utils.Tests.Json
 {
     public class TestObject
     {
