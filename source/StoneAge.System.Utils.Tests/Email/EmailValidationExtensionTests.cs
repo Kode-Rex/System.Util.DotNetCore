@@ -1,6 +1,6 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
-using StoneAge.System.Utils.EmailUtils;
+using StoneAge.System.Utils.Email;
 
 namespace StoneAge.System.Utils.Tests.Email
 {

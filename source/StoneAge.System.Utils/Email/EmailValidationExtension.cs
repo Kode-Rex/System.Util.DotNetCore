@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
-namespace StoneAge.System.Utils.EmailUtils
+namespace StoneAge.System.Utils.Email
 {
     public static class EmailValidationExtension
     {

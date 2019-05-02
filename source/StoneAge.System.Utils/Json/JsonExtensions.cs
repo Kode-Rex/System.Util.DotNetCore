@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using StoneAge.System.Utils.JsonUtils;
 
 namespace StoneAge.System.Utils.Json
 {
@@ -22,6 +21,11 @@ namespace StoneAge.System.Utils.Json
         }
 
         public static string Serialize(this object input)
+        {
+            return JsonConvert.SerializeObject(input);
+        }
+
+        public static string Serialize_With_CamelCase_Setting(this object input)
         {
             return JsonConvert.SerializeObject(input, CamelcaseJsonSerializerSettings);
         }

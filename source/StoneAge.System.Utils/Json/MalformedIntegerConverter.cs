@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace StoneAge.System.Utils.JsonUtils
+namespace StoneAge.System.Utils.Json
 {
     public class MalformedIntegerJsonConverter : JsonConverter
     {

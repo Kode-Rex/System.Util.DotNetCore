@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace StoneAge.System.Utils.JsonUtils
+namespace StoneAge.System.Utils.Json
 {
     public class DeserializationResult<T>
     {

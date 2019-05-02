@@ -9,10 +9,10 @@
     <Description>Some useful utilities for JSON parsing, email validation, time and object property hashing, and object property copying</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/System.Util.DotNetCore</PackageProjectUrl>
-    <AssemblyVersion>1.2.4.0</AssemblyVersion>
-    <FileVersion>1.2.4.0</FileVersion>
-    <Version>1.2.4</Version>
-    <PackageReleaseNotes>Added Serialize_With_LowerCase_Settings to allow non-camel case serialization</PackageReleaseNotes>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+    <FileVersion>1.3.0.0</FileVersion>
+    <Version>1.3.0</Version>
+    <PackageReleaseNotes>Added EquivalentTo for comparing objects properties</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
