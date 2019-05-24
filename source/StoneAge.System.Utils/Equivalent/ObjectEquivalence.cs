@@ -29,7 +29,7 @@ namespace StoneAge.System.Utils.Equivalent
                 var propValue2 = prop.GetValue(instance2, null);
 
                 if(propValue1 == null && propValue2 == null) continue;
-                if(propValue1.ToString() != propValue2.ToString())
+                if(propValue1.ToString().TrimEnd('0') != propValue2.ToString().TrimEnd('0'))
                 {
                     return false;
                 }

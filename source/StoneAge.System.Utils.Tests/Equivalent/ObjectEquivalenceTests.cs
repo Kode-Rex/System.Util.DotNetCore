@@ -98,7 +98,7 @@ namespace StoneAge.System.Utils.Tests.Equivalent
                 Id = 1001,
                 AccountId = 1,
                 AccountName = "account name",
-                AmountCharged = 1.01M,
+                AmountCharged = 1.010000M,
                 BillTime = DateTime.MinValue,
                 BilledSeconds = 11,
                 CallId = "abc-xyz",
