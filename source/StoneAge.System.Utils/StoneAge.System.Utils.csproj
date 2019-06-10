@@ -9,10 +9,10 @@
     <Description>Some useful utilities for JSON parsing, email validation, time and object property hashing, and object property copying</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/System.Util.DotNetCore</PackageProjectUrl>
-    <AssemblyVersion>1.4.0.0</AssemblyVersion>
-    <FileVersion>1.4.0.0</FileVersion>
-    <Version>1.4.0</Version>
-    <PackageReleaseNotes>Downgraded Newtonsoft.Json to version 11.0.2 so it works with Azure Functions</PackageReleaseNotes>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+    <FileVersion>1.5.0.0</FileVersion>
+    <Version>1.5.0</Version>
+    <PackageReleaseNotes>Made ObjectPropertyCopier throw exception when ignore property not found</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

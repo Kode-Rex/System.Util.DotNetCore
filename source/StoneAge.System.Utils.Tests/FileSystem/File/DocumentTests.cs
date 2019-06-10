@@ -51,6 +51,7 @@ namespace StoneAge.System.Utils.Tests.FileSystem.File
             {
                 //---------------Arrange-------------------
                 var file = Create_Document("a line of text", Path.GetTempPath());
+                global::System.IO.File.WriteAllText(file.Full_Path(), "a line of text");
                 //---------------Act----------------------
                 var actual = file.Exists();
                 //---------------Assert-----------------------

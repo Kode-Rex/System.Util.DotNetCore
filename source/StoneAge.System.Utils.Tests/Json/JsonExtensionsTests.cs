@@ -46,7 +46,7 @@ namespace StoneAge.System.Utils.Tests.Json
         public void Serialize_WhenObjectContainTitleCaseProperties_ShouldReturnCamelcaseProperties()
         {
             //---------------Set up test pack-------------------
-            var expected = "{\"foo\":\"bar\",\"magicProperty\":\"foobar\"}";
+            var expected = "{\"Foo\":\"bar\",\"MagicProperty\":\"foobar\"}";
             var input = new
             {
                 Foo = "bar",

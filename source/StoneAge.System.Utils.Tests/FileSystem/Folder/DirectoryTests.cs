@@ -45,7 +45,7 @@ namespace StoneAge.System.Utils.Tests.FileSystem.Folder
             {
                 //---------------Arrange-------------------
                 var path = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
-                //System.IO.Directory.CreateDirectory(path);
+                global::System.IO.Directory.CreateDirectory(path);
                 var sut = new Directory { Location = path };
                 //---------------Act----------------------
                 var actual = sut.List_Files();
