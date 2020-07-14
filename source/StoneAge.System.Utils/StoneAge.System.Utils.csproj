@@ -9,10 +9,10 @@
     <Description>Some useful utilities for JSON parsing, email validation, time and object property hashing, and object property copying</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/System.Util.DotNetCore</PackageProjectUrl>
-    <AssemblyVersion>1.5.1.0</AssemblyVersion>
-    <FileVersion>1.5.1.0</FileVersion>
-    <Version>1.5.1</Version>
-    <PackageReleaseNotes>Adjusted the UtcUtils method Parse_As_Utc_Then_Add_Current_Timezone_Offset to work correct across day lights savings</PackageReleaseNotes>
+    <AssemblyVersion>1.5.2.0</AssemblyVersion>
+    <FileVersion>1.5.2.0</FileVersion>
+    <Version>1.5.2</Version>
+    <PackageReleaseNotes>Added Split_List to split list into chunks of X size</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
