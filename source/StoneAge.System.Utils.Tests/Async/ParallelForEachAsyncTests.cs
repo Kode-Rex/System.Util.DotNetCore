@@ -12,18 +12,51 @@ namespace StoneAge.System.Utils.Tests.Async
     public class ParallelForEachAsyncTests
     {
         [Test]
-        public async Task test()
+        public async Task Should_Iterate_Collection()
         {
             // arrange
             var result = new List<int>();
             var input = Enumerable.Range(1, 20);
             // act
-            await input.ForEachAsync(new Func<int, Task>(async x =>
+            await input.ForEachAsync(async x =>
             {
                 result.Add(x + 1);
-            }), 2);
+            }, 2);
             // assert
             result.Count().Should().Be(20);
+        }
+
+        [Test]
+        public async Task When_Empty_List_Should_Do_Nothing()
+        {
+            // arrange
+            var result = new List<int>();
+            var input = new List<int>();
+            // act
+            await input.ForEachAsync(async x =>
+            {
+                result.Add(x + 1);
+            }, 2);
+            // assert
+            result.Count().Should().Be(0);
+        }
+
+        [Test]
+        public async Task When_Exception_Should_Throw_Exception()
+        {
+            // arrange
+            var result = new List<int>();
+            var input = Enumerable.Range(1, 20);
+            // act
+            var actual = Assert.ThrowsAsync<Exception>(async () =>{
+                await input.ForEachAsync(async x=>
+                {
+                    throw new Exception("error");
+                }, 2);
+            });
+
+            // assert
+            actual.Message.Should().Be("error");
         }
     }
 }

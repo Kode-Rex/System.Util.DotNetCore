@@ -12,6 +12,11 @@ namespace StoneAge.System.Utils.Async
     {
         public static async Task ForEachAsync<T>(this IEnumerable<T> source, Func<T, Task> action, int maxParallelCount = 4)
         {
+            if (source.Count() == 0)
+            {
+                return;
+            }
+
             using (SemaphoreSlim completeSemphoreSlim = new SemaphoreSlim(1))
             using (SemaphoreSlim taskCountLimitsemaphoreSlim = new SemaphoreSlim(maxParallelCount))
             {
@@ -22,7 +27,7 @@ namespace StoneAge.System.Utils.Async
                 {
                     await taskCountLimitsemaphoreSlim.WaitAsync();
 
-                    Task.Run(async () =>
+                    await Task.Run(async () =>
                     {
                         try
                         {
@@ -33,13 +38,23 @@ namespace StoneAge.System.Utils.Async
                                 {
                                     completeSemphoreSlim.Release();
                                 }
+
+                                if (task.Exception != null)
+                                {
+                                    throw task.Exception.InnerException;
+                                }
+
                             });
+                        }
+                        catch (Exception e)
+                        {
+                            throw;
                         }
                         finally
                         {
                             taskCountLimitsemaphoreSlim.Release();
                         }
-                    }).GetHashCode();
+                    });
                 }
 
                 await completeSemphoreSlim.WaitAsync();
