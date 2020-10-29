@@ -9,10 +9,10 @@
     <Description>Some useful utilities for JSON parsing, email validation, time and object property hashing, and object property copying</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/System.Util.DotNetCore</PackageProjectUrl>
-    <AssemblyVersion>1.5.6.0</AssemblyVersion>
-    <FileVersion>1.5.6.0</FileVersion>
-    <Version>1.5.6</Version>
-    <PackageReleaseNotes>Added ToLong and ToInt for converting ulong and uint to long and int respectively.</PackageReleaseNotes>
+    <AssemblyVersion>1.5.7.0</AssemblyVersion>
+    <FileVersion>1.5.7.0</FileVersion>
+    <Version>1.5.7</Version>
+    <PackageReleaseNotes>Restored parallelization</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
