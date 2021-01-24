@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <PackageId>StoneAge.System.Utils.DotNetCore</PackageId>
     <Authors>Travis Frisinger</Authors>
     <Company>StoneAge Technologies</Company>
@@ -9,14 +9,14 @@
     <Description>Some useful utilities for JSON parsing, email validation, time and object property hashing, and object property copying</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/System.Util.DotNetCore</PackageProjectUrl>
-    <AssemblyVersion>1.5.7.0</AssemblyVersion>
-    <FileVersion>1.5.7.0</FileVersion>
-    <Version>1.5.7</Version>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <FileVersion>5.0.0.0</FileVersion>
+    <Version>5.0.0</Version>
     <PackageReleaseNotes>Restored parallelization</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
 </Project>
