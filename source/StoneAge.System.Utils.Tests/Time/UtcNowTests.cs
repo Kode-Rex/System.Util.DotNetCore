@@ -1,4 +1,5 @@
 ﻿using System;
+using FluentAssertions;
 using NUnit.Framework;
 using StoneAge.System.Utils.Time;
 
@@ -16,7 +17,8 @@ namespace StoneAge.System.Utils.Tests.Time
             var actual = sut.Now();
             //---------------Assert-----------------------
             var expected = DateTime.Now.ToUniversalTime();
-            Assert.AreEqual(expected.ToString("yyyy-MM-dd hh:mm:ss"), actual.ToString("yyyy-MM-dd hh:mm:ss"));
+            actual.ToString("yyyy-MM-dd hh:mm:ss").Should().Be(expected.ToString("yyyy-MM-dd hh:mm:ss"));
+
         }
     }
 }
