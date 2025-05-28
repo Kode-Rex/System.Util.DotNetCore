@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using FluentAssertions;
+using NUnit.Framework;
 using StoneAge.System.Utils.Json;
 
 namespace StoneAge.System.Utils.Tests.Json
@@ -14,8 +15,8 @@ namespace StoneAge.System.Utils.Tests.Json
             //---------------Execute Test ----------------------
             var result = model.TryDeserialize<TestObject>();
             //---------------Test Result -----------------------
-            Assert.IsTrue(result.IsValid);
-            Assert.IsNotNull(result.Model);
+            result.IsValid.Should().BeTrue();
+            result.Model.Should().NotBeNull();
         }
 
         [Test]
@@ -26,8 +27,8 @@ namespace StoneAge.System.Utils.Tests.Json
             //---------------Execute Test ----------------------
             var result = model.TryDeserialize<TestObject>();
             //---------------Test Result -----------------------
-            Assert.IsTrue(result.IsValid);
-            Assert.IsNotNull(result.Model);
+            result.IsValid.Should().BeTrue();
+            result.Model.Should().NotBeNull();
         }
 
         [Test]
@@ -38,8 +39,8 @@ namespace StoneAge.System.Utils.Tests.Json
             //---------------Execute Test ----------------------
             var result = model.TryDeserialize<TestObject>();
             //---------------Test Result -----------------------
-            Assert.IsFalse(result.IsValid);
-            Assert.IsNull(result.Model);
+            result.IsValid.Should().BeFalse();
+            result.Model.Should().BeNull();
         }
 
         [Test]
@@ -55,7 +56,7 @@ namespace StoneAge.System.Utils.Tests.Json
             //---------------Execute Test ----------------------
             var result = input.Serialize();
             //---------------Test Result -----------------------
-            Assert.AreEqual(expected, result);
+            result.Should().Be(expected);
         }
 
         [Test]
@@ -71,7 +72,7 @@ namespace StoneAge.System.Utils.Tests.Json
             //---------------Execute Test ----------------------
             var result = input.Serialize_With_LowerCase_Settings();
             //---------------Test Result -----------------------
-            Assert.AreEqual(expected, result);
+            result.Should().Be(expected);
         }
 
         [Test]
@@ -82,8 +83,8 @@ namespace StoneAge.System.Utils.Tests.Json
             //---------------Execute Test ----------------------
             var result = input.Deserialize<TestObject>();
             //---------------Test Result -----------------------
-            Assert.AreEqual(1, result.Foo);
-            Assert.AreEqual("bar", result.MagicProperty);
+            result.Foo.Should().Be(1);
+            result.MagicProperty.Should().Be("bar");
         }
 
     }

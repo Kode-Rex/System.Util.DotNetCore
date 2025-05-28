@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using StoneAge.System.Utils.Async;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -16,13 +17,13 @@ namespace StoneAge.System.Utils.Tests.Async
         public async Task Should_Iterate_Collection()
         {
             // arrange
-            var result = new List<int>();
+            var result = new ConcurrentBag<int>();
             var input = Enumerable.Range(1, 20);
             // act
             await input.ForEachAsync(async x =>
             {
                 result.Add(x + 1);
-                Thread.Sleep(10000);
+                await Task.Delay(10);
             }, 2);
             // assert
             result.Count().Should().Be(20);
@@ -38,6 +39,7 @@ namespace StoneAge.System.Utils.Tests.Async
             await input.ForEachAsync(async x =>
             {
                 result.Add(x + 1);
+                await Task.Delay(10);
             }, 2);
             // assert
             result.Count().Should().Be(0);

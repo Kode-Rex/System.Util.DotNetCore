@@ -2,3 +2,4 @@
 **/bin
 **/.suo
 **/.vs/**
+.DS_Store
