@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <PackageId>StoneAge.System.Utils.DotNetCore</PackageId>
     <Authors>Travis Frisinger</Authors>
     <Company>StoneAge Technologies</Company>
@@ -9,10 +9,10 @@
     <Description>Some useful utilities for JSON parsing, email validation, time and object property hashing, and object property copying</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/System.Util.DotNetCore</PackageProjectUrl>
-    <AssemblyVersion>7.0.0.0</AssemblyVersion>
-    <FileVersion>7.0.0.0</FileVersion>
-    <Version>7.0.0</Version>
-    <PackageReleaseNotes>Restored parallelization</PackageReleaseNotes>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
+    <FileVersion>8.0.0.0</FileVersion>
+    <Version>8.0.0</Version>
+    <PackageReleaseNotes>Upgraded to .NET 8.0</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
